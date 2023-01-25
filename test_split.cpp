@@ -17,7 +17,7 @@ g++ split.cpp test_split.cpp -o test_split
 
 int main(int argc, char* argv[])
 {
-Node * node = new Node(1,NULL);
+    Node * node = new Node(1,NULL);
     node->next = new Node(2,NULL);
     node->next->next = new Node(5,NULL);
     node->next->next->next = new Node(4,NULL);
