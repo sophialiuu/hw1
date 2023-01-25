@@ -76,9 +76,11 @@ void ULListStr::push_front(const std::string& val){
     temp->val[temp->first] = val; //set first val in new item to val
     head_ = temp; //point head and tail at temp
     tail_ = temp;
+    //temp->next = NULL;
+    //temp->prev = NULL;
   }
   //if item is full 
-  else if(head_->last - head_->first == ARRSIZE){
+  else if(!empty() && head_->first == 0 ){ //- head_->first == ARRSIZE
     Item* temp = new Item(); //make new item
     temp->last = ARRSIZE; //set first and last poitners to end up arr 
     temp->first = ARRSIZE-1; 
@@ -92,7 +94,10 @@ void ULListStr::push_front(const std::string& val){
   //if inserting into existing item that has space 
   else{
     head_->first--; //move first one space backward 
-    head_->val[head_->first] = val; //set val
+   // if(head_->first > 0){
+      head_->val[head_->first] = val; //set val
+    //}
+    
   }
   size_++;
 }

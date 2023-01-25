@@ -438,7 +438,10 @@ TEST(ListRemove, SongOfBackAndFront)
 
 	// this should create an empty slot at the front of the list, and the new element can be put there
 	list.pop_front();
+	std::cout << "ABOUT TO PUSH FRONT" << std::endl;
 	list.push_front("newfront");
+	std::cout << "____JUST PUSHED FRONT" << std::endl;
+
 
 	EXPECT_TRUE(checkListContent(&list, {"newfront", "oldback"}));
 
