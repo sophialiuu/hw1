@@ -12,7 +12,7 @@ the function below should be the only one in this file.
 
 #include "split.h"
 #define nullptr 0
-#include <cstdlib>
+//#include <cstdlib>
 
 /* Add a prototype for a helper function here if you need */
 
